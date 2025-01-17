@@ -5,8 +5,8 @@ import HeroSection from "./sections/hero-section";
 import WhatCard from "./sections/what/whatCard";
 import WhyChoose from "./sections/whyChoose";
 import SubCard from "./sections/sub/subCard";
-
-
+import Testimonial from "./sections/testimonial";
+import Footer from "./sections/footer";
 const Home = () => {
   const navigate = useNavigate();
   const { user, isAuthenticated, isLoading, logout } = useAuth0();
@@ -24,11 +24,13 @@ const Home = () => {
   console.log(isAuthenticated);
   return (
     <>
-    <div>
+    <div className="min-h-screen">
       <HeroSection/>
       <WhatCard/>
       <WhyChoose/>
       <SubCard/>
+      <Testimonial/>
+      <Footer/>
     </div>
 
  

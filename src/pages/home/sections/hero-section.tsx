@@ -1,6 +1,7 @@
 import img1 from '../../../assets/logo.svg'
 import { Button } from '../../../components/ui/button'
 import img2 from '../../../assets/tail-right.svg'
+import { Link } from 'react-router-dom'
 const HeroSection = () => {
   return (
     <>
@@ -13,8 +14,11 @@ const HeroSection = () => {
         <h1 className='text-3xl text-white font-bold'>SUBTrack</h1>
           </li>
           <li className='flex items-center gap-2'>
-            <Button variant={'ghost'} className='text-white'>
+            <Button variant={'ghost'} className='text-white' asChild>
+              <Link to={'/login'}>
+              
               Login
+              </Link>
             </Button>
             <Button variant={'default'} className='text-white bg-[#2152FF] hover:bg-[#2152FF]/70'>
              Sign Up
