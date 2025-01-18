@@ -14,6 +14,7 @@ export default {
   		},
 		  backgroundImage: {
 			'hero-image': "url('./assets/heroimage.svg')",
+			'login-image': "url('./assets/signupimg.svg')",	
 		  },
   		colors: {
   			background: 'hsl(var(--background))',
