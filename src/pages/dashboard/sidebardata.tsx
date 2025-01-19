@@ -15,29 +15,29 @@ export const SidebarData:sidebarProps[] = [
 }, 
  { icon:<Icon icon="material-symbols-light:subtitles-outline" className='text-2xl' />,
     title:'Subscription',
-    link:'/subcription'
+    link:'/dashboard/subscription'
     
         
 },
   {
     icon:<Icon icon="material-symbols:analytics-outline" className='text-2xl' />,
     title:'Transaction',
-    link:'/transaction'
+    link:'/dashboard/transaction'
         
 },
   {icon:<Icon icon="ic:baseline-support-agent" className='text-2xl' />,
     title:'Support',
-    link:'/support'
+    link:'/dashboard/support'
         
 }, 
  {icon:<Icon icon="ci:settings" className='text-2xl' />,
     title:'Settings',
-    link:'/settings'
+    link:'/dashboard/settings'
         
 }, 
  {icon:<Icon icon="iconoir:log-out" className='text-2xl' />,
     title:'Sign Out',
-    link:'/signout'
+    link:'/dashboard/signout'
         
 },
   

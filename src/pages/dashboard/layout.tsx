@@ -1,7 +1,7 @@
 import Sidebar from "./sidebar"
 import Navbar from "./navbar"
 import { Outlet } from "react-router-dom"
-const Layout = () => {
+const DashboardLayout = () => {
   return (
     <>
     {/* sidebar takes 308px while main takes the remaining space */}
@@ -19,4 +19,4 @@ const Layout = () => {
   )
 }
 
-export default Layout
+export default DashboardLayout

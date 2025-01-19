@@ -7,7 +7,8 @@ import Home from "./pages/home/home";
 import Register from "./authentication/register";
 import Authroute from "./authentication/authroute";
 import Sidebar from "./pages/dashboard/sidebar";
-import Layout from "./pages/dashboard/layout";
+
+import Dashboardroute from "./pages/dashboard/dasboardroute";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/sidebar" element={<Sidebar/>} />
-        <Route path="/dashboard" element={<Layout/>} />
+        <Route path="/dashboard/*" element={<Dashboardroute/>} />
       </Routes>
     </Router>
   );
