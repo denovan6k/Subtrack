@@ -82,8 +82,8 @@ function PieCharts() {
   }, [period]);
   return (
     <Card className="flex flex-col w-full">
-      <CardHeader className="flex justify-between items-center pb-0">
-        <CardTitle>Category</CardTitle>
+      <CardHeader className="flex flex-row justify-between items-center pb-0">
+        <CardTitle className="text-2xl text-black/70 font-normal">Category</CardTitle>
         <CardDescription>
           <div className="flex flex-col space-y-2 p-4 sm:flex-row sm:space-x-2 sm:space-y-0">
             <Select value={period} onValueChange={setPeriod}>

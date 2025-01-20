@@ -198,7 +198,7 @@ export const columns: ColumnDef<tableData>[] = [
       return <div className="flex items-center space-x-2">
         {icon}
         <div className="flex space-x-2">
-        <p className="font-bold">
+        <p className="">
           {row.original.platform}</p> 
          
           </div></div>

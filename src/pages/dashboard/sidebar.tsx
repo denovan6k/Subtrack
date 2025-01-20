@@ -1,6 +1,7 @@
 import img1 from '../../assets/logob.svg'
 import { SidebarData } from './sidebardata'
 import { Link } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (
     <>
@@ -11,13 +12,20 @@ const Sidebar = () => {
            </header>
            {SidebarData.map((item,index) => (
                 <ul className='flex flex-col gap-6' key={index}>
-                <li className=''>
-                        <Link to={item.link} className='flex items-center gap-4 hover:text-[#2152FF] hover:bg-[#DBEDFF] p-4 rounded-lg'> 
+                  <NavLink to={item.link}
+                  end={item.link === "/dashboard"}  
+                  className={({ isActive }) =>
+                isActive ? "bg-[#DBEDFF] text-[#2152FF] rounded-lg  " : ""
+              
+              }>
+                <li className='flex items-center gap-4 hover:text-[#2152FF] hover:bg-[#eef5fe] p-4 rounded-lg'>
+                          
                         
                         {item.icon}
                         <p>{item.title}</p>
-                        </Link>
+                       
                 </li>
+                </NavLink>
                </ul>
            ))}
           

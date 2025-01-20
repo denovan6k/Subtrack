@@ -2,6 +2,7 @@ import * as React from "react"
 import { Button } from "../../components/ui/button"
 import filter from '../../assets/filter-outline.svg'
 import plus from '../../assets/plus.svg'
+import { Search } from "lucide-react"; 
 //Tanstack Table
 import {
   ColumnDef,
@@ -10,7 +11,7 @@ import {
   getFilteredRowModel,
   getCoreRowModel,
   getPaginationRowModel,
-  getSortedRowModel,
+  // getSortedRowModel,
   SortingState,
   useReactTable,
 } from "@tanstack/react-table"
@@ -25,6 +26,8 @@ import {
 } from "../../components/ui/table"
 import { Input } from "../../components/ui/input"
 import { Link } from "react-router-dom"
+import Navbar from "../dashboard/navbar"
+
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
@@ -55,15 +58,21 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="flex flex-col gap-4">
-    <div className="flex items-center py-2">
+    <div className="flex justify-between items-center ">
+      <div className="relative">
     <Input
           placeholder="Search..."
           value={(table.getColumn("platform")?.getFilterValue() as string) ?? ""} // Set your default value here
           onChange={(event) =>
             table.getColumn("platform")?.setFilterValue(event.target.value) // On input change set the filter value
           }
-          className="max-w-sm rounded-xl"
+          className="max-w-sm rounded-xl py-2 pl-10 pr-2"
         />
+           <Search className="absolute left-2 top-2 text-black/40" />
+        </div>
+        
+      
+        <Navbar/>
       </div>
       <ul className="flex flex-col gap-4">
         <li className="text-xl text-black font-semibold">
@@ -91,9 +100,11 @@ export function DataTable<TData, TValue>({
              <Button size={'icon'} className="border-0 rounded-none bg-transparent hover:bg-muted-foreground hover:rounded-xl">
                 <img src={filter} alt='filter'/>
              </Button>
-             <Button variant={'default'} className="rounded-lg bg-[#2152FF] hover:bg-[#2152FF]/60">
+             <Button variant={'default'} className="rounded-lg bg-[#2152FF] hover:bg-[#2152FF]/60" asChild>
+              <Link to={'/dashboard/subscription/new'} > 
                 <img src={plus} alt='plus'/>
-                Add new Subcription
+                Add new Subscription
+                </Link>
              </Button>
             </div>
         </li>
@@ -130,7 +141,7 @@ export function DataTable<TData, TValue>({
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id} className="">
             
-                    <Link to={`/crypto/${cell.row.id}?`}>
+                    <Link to={`/dashboard/subscription/${cell.row.id}?`}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </Link>   
                   

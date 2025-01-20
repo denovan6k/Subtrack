@@ -10,10 +10,10 @@ export const SidebarData:sidebarProps[] = [
     { 
         icon:<Icon icon="ic:outline-space-dashboard" className='text-2xl' />,
         title:'Dashboard',
-        link:'/'
+        link:'/dashboard'
         
 }, 
- { icon:<Icon icon="material-symbols-light:subtitles-outline" className='text-2xl' />,
+ { icon:<Icon icon="ic:outline-subtitles" className='text-2xl' />,
     title:'Subscription',
     link:'/dashboard/subscription'
     

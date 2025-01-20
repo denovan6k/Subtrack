@@ -1,12 +1,15 @@
-import Table from "../subscription/page"
+// import Table from "../subscription/page"
 import AnalyticsDashboard from "./charts/analytics-dashboard"
 import PieCharts from "./charts/pie-chart"
 import DashCards from "./dashcards"
+import Navbar from "./navbar"
 
 const Dashboard = () => {
   return (
     <>
+
     <div className="px-9 pb-9 flex flex-col gap-4">
+    <Navbar/>
       <header className="flex flex-col gap-2">
         <h1 className="text-2xl text-black">Dashboard</h1>
         <p className="text-[#000000]/70">Here`s whats happening Today</p>
@@ -20,9 +23,9 @@ const Dashboard = () => {
       </div>
       <PieCharts/>
      </main>
-     <footer>
+     {/* <footer>
       <Table/>
-     </footer>
+     </footer> */}
     </div>
     
     </>

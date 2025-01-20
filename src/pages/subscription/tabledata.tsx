@@ -1,4 +1,5 @@
 export interface tableData  {
+    id?: number
     platform: string
     status: string
     interval: string
@@ -7,6 +8,7 @@ export interface tableData  {
 }
 
 export const TableDat : tableData[] = [{
+    id:0,
 platform:'Figma',
 status: 'active',
 interval: 'Monthly',
@@ -14,6 +16,7 @@ activated: 'Jan 05, 2024',
 expiry_date: 'Dec 12, 2024',
 },
 {
+    id:1,
     platform:'Dribbble',
     status: 'inactive',
     interval: 'Monthly',
@@ -21,13 +24,14 @@ expiry_date: 'Dec 12, 2024',
     expiry_date: 'Dec 12, 2024',
     },
     {
+        id:2,
         platform:'Dropbox',
         status: 'Due',
         interval: 'Monthly',
         activated: 'Jan 05, 2024',
         expiry_date: 'Dec 12, 2024',
         },
-        {
+        {id:3,
             platform:'Adobe',
             status: 'Due',
             interval: 'Monthly',
@@ -35,6 +39,7 @@ expiry_date: 'Dec 12, 2024',
             expiry_date: 'Dec 12, 2024',
             },
             {
+                id:4,
                 platform:'Netflix',
                 status: 'active',
                 interval: 'Monthly',
@@ -42,6 +47,7 @@ expiry_date: 'Dec 12, 2024',
                 expiry_date: 'Dec 12, 2024',
                 },
                 {
+                    id:5,
                     platform:'Spotify',
                     status: 'active',
                     interval: 'Monthly',
@@ -49,34 +55,35 @@ expiry_date: 'Dec 12, 2024',
                     expiry_date: 'Dec 12, 2024',
                     },
                     {
+                        id:6,
                         platform:'Chat GPT',
                         status: 'inactive',
                         interval: 'Monthly',
                         activated: 'Jan 05, 2024',
                         expiry_date: 'Dec 12, 2024',
                         },
-                        {
+                        {id:7,
                             platform:'Snapchat',
                             status: 'active',
                             interval: 'Monthly',
                             activated: 'Jan 05, 2024',
                             expiry_date: 'Dec 12, 2024',
                             },
-                            {
+                            {id:8,
                                 platform:'Behance',
                                 status: 'inactive',
                                 interval: 'Monthly',
                                 activated: 'Jan 05, 2024',
                                 expiry_date: 'Dec 12, 2024',
                                 },
-                                {
+                                {id:9,
                                     platform:'Grammarly',
                                     status: 'active',
                                     interval: 'Monthly',
                                     activated: 'Jan 05, 2024',
                                     expiry_date: 'Dec 12, 2024',
                                     },
-                                    {
+                                    {id:10,
                                         platform:'X',
                                         status: 'inactive',
                                         interval: 'Monthly',

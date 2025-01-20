@@ -70,7 +70,7 @@ export default function AnalyticsDashboard() {
   const [period, setPeriod] = useState("monthly")
 
   return (
-    <Card className="w-full  ">
+    <Card className="w-full">
       <CardHeader className="space-y-0 pb-2">
         <CardTitle className=" lg:flex-row flex flex-col items-center justify-between">
           <span className="text-2xl font-bold">Analytics</span>
