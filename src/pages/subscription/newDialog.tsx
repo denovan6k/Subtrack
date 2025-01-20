@@ -80,7 +80,7 @@ import { Button } from "../../components/ui/button"
             <div className="p-6 flex justify-center items-center">
             <img src={check} alt="" />
             </div>
-          
+          <DialogTitle></DialogTitle>
         </DialogHeader>
          <div className="flex flex-col items-center justify-center gap-4">
             <DialogDescription>

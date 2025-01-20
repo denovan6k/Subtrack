@@ -15,7 +15,7 @@ const HeroSection = () => {
           </li>
           <li className='flex items-center gap-2'>
             <Button variant={'ghost'} className='text-white' asChild>
-              <Link to={'/authentication/register'}>
+              <Link to={'/authentication/signup'}>
               
               Login
               </Link>

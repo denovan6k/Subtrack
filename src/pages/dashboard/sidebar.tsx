@@ -1,6 +1,6 @@
 import img1 from '../../assets/logob.svg'
 import { SidebarData } from './sidebardata'
-import { Link } from 'react-router-dom'
+
 import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (

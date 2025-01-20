@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useNavigate } from 'react-router-dom';
 // import img1 from '../assets/logo.svg'
 import {
   Form,
@@ -38,16 +39,17 @@ const SignUp = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       businessName: "",
-      country: "Canada",
-      industry: "Marketing and Advertisement",
-      language: "English",
+      country: "",
+      industry: "",
+      language: "",
       
     },
   });
-
+ const navigate = useNavigate();
 
   const onSubmit = (data: any) => {
     console.log(data);
+    navigate(`/dashboard`)
   };
   return (
     <>

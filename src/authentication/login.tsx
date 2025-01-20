@@ -1,11 +1,12 @@
 import  { useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router";
-import "./Login.css";
-// import loginimg from "../../images/login/image.png";
+
+
 import frame from "../images/login/Frame 4409.png";
 const Login = () => {
-  const { loginWithRedirect, user } = useAuth0();
+  // user
+  const { loginWithRedirect,  } = useAuth0();
   const navigate = useNavigate();
 
   useEffect(() => {});
@@ -20,7 +21,7 @@ const Login = () => {
 
   return (
   
-  <div className="login-container">
+  <div className="">
       <div>
         <h2>SUBTrack Login</h2>
         <button onClick={getHandleLogin}>Login</button>

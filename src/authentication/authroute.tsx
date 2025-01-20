@@ -7,7 +7,7 @@ const Authroute = () => {
     <>
  <Routes>
     <Route path="/" element={<Login/>} />
-    <Route path="/register" element={<SignUp/>} />
+    <Route path="/signup" element={<SignUp/>} />
 </Routes>   
     </>
   )
