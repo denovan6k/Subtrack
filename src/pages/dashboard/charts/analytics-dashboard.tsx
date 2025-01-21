@@ -72,11 +72,11 @@ export default function AnalyticsDashboard() {
   return (
     <Card className="w-full">
       <CardHeader className="space-y-0 pb-2">
-        <CardTitle className=" lg:flex-row flex flex-col items-center justify-between">
+        <CardTitle className=" xl:flex-row  flex flex-col items-center justify-between">
           <span className="text-2xl font-bold">Analytics</span>
           <div className="flex flex-col space-y-2 p-4 sm:flex-row sm:space-x-2 sm:space-y-0">
             <Select value={subscriptionType} onValueChange={setSubscriptionType}>
-              <SelectTrigger className="w-[180px] text-black/60" >
+              <SelectTrigger className=" text-black/60" >
                 <SelectValue placeholder="All subscriptions" />
               </SelectTrigger>
               <SelectContent>
@@ -87,7 +87,7 @@ export default function AnalyticsDashboard() {
             </Select>
 
             <Select value={metric} onValueChange={setMetric}>
-              <SelectTrigger className="w-[140px] text-black/60">
+              <SelectTrigger className=" text-black/60">
                 <SelectValue placeholder="Amount" />
               </SelectTrigger>
               <SelectContent>
@@ -100,7 +100,7 @@ export default function AnalyticsDashboard() {
             </Select>
 
             <Select value={period} onValueChange={setPeriod}>
-              <SelectTrigger className="w-[140px] text-black/60">
+              <SelectTrigger className=" text-black/60">
                 <SelectValue placeholder="Monthly" />
               </SelectTrigger>
               <SelectContent>

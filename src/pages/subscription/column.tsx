@@ -32,7 +32,7 @@ const statusIcon = (row: tableData) => {
           alt=''
         />
       );
-    case 'inactive':
+    case 'in':
       return (
         <img
           src={inactive}

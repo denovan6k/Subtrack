@@ -3,6 +3,8 @@ import DashboardLayout from "./layout";
 import Dashboard from "./dashboard";
 import Subscription from "../subscription/subcription";
 import NewSub from "../subscription/newSub";
+import SettingRoutes from "../setting/settingRoutes";
+
 
 
 const Dashboardroute = () => {
@@ -11,10 +13,14 @@ const Dashboardroute = () => {
  <Routes>
     <Route path="/" element={<DashboardLayout/>} > 
     <Route index element={<Dashboard/>} />
+     <Route path='/subscription' element={<Subscription/>}/>
     <Route path='/subscription' element={<Subscription/>}/>
     <Route path='/subscription/:id' element={<Subscription/>}/>
     <Route path='/subscription/new' element={<NewSub/>}/>
     <Route path='/subscription/new/:id' element={<NewSub/>}/>
+    <Route path='/setting' element={<SettingRoutes/>}/>
+    
+
     </Route>
 </Routes>   
     </>

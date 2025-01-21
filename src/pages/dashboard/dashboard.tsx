@@ -17,7 +17,7 @@ const Dashboard = () => {
       <section>
         <DashCards />
       </section>
-     <main className="lg:flex-row flex flex-col gap-4 justify-between ">
+     <main className="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
       <div className="">
       <AnalyticsDashboard/>
       </div>

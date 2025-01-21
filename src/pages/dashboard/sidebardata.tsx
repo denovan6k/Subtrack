@@ -32,7 +32,7 @@ export const SidebarData:sidebarProps[] = [
 }, 
  {icon:<Icon icon="ci:settings" className='text-2xl' />,
     title:'Settings',
-    link:'/dashboard/settings'
+    link:'/dashboard/setting'
         
 }, 
  {icon:<Icon icon="iconoir:log-out" className='text-2xl' />,

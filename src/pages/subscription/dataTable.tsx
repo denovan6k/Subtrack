@@ -11,7 +11,7 @@ import {
   getFilteredRowModel,
   getCoreRowModel,
   getPaginationRowModel,
-  // getSortedRowModel,
+  
   SortingState,
   useReactTable,
 } from "@tanstack/react-table"
@@ -41,6 +41,7 @@ export function DataTable<TData, TValue>({
     []
   )
   const [sorting, setSorting] = React.useState<SortingState>([])
+  const [activeFilter, setActiveFilter] = React.useState<string>('All') // Track active filter
   const table = useReactTable({
     data,
     columns,
@@ -82,17 +83,32 @@ export function DataTable<TData, TValue>({
         Your list of subscription platforms including active, inactive, due, and failed.
         </li>
         <li className="flex justify-between">
-        <div className="rounded-full px-2 py-1 flex  max-w-[346px] border border-black/20 items-center justify-between ">
-           <Button variant={'ghost'} className="hover:bg-[#DBEDFF] hover:text-[#2152FF] rounded-full border-0">
+        <div className="rounded-full px-2 py-2 flex gap-2 max-w-[346px] border border-black/20 items-center justify-between ">
+           <Button variant={'ghost'} className={`hover:bg-[#f0f8ff] hover:text-[#2152FF] rounded-full border-0 ${activeFilter === 'All' ? 'bg-[#DBEDFF] text-[#2152FF]' : ''}`} onClick={()=> {setColumnFilters([])
+
+setActiveFilter('All')
+           }
+          }>
             All
            </Button>
-           <Button variant={'ghost'} className="hover:bg-[#DBEDFF] hover:text-[#2152FF] rounded-full border-0" >
+           <Button variant={'ghost'} className={`hover:bg-[#f0f8ff] hover:text-[#2152FF] rounded-full border-0 ${activeFilter === 'active' ? 'bg-[#DBEDFF] text-[#2152FF]' : ''}`}   onClick={() => {
+      setColumnFilters([{ id: 'status', value: 'active' }]) // Filter by 'active' status
+      setActiveFilter('active')
+           } } >
             Active
            </Button>
-           <Button variant={'ghost'} className="hover:bg-[#DBEDFF] hover:text-[#2152FF] rounded-full border-0">
+           <Button variant={'ghost'} className={`hover:bg-[#f0f8ff] hover:text-[#2152FF] rounded-full border-0 ${activeFilter === 'in' ? 'bg-[#DBEDFF] text-[#2152FF]' : ''}`}
+             onClick={() =>
+             { setColumnFilters([{ id: 'status', value: 'in' }]) // Filter by 'active' status
+             setActiveFilter('in')         
+         }}>
             Inactive
            </Button>
-           <Button variant={'ghost'} className="hover:bg-[#DBEDFF] hover:text-[#2152FF] rounded-full border-0">
+           <Button variant={'ghost'} className={`hover:bg-[#f0f8ff] hover:text-[#2152FF] rounded-full border-0 ${activeFilter === 'due' ? 'bg-[#DBEDFF] text-[#2152FF]' : ''}`}
+             onClick={() =>
+            {  setColumnFilters([{ id: 'status', value: 'due' }]) // Filter by 'active' status
+            setActiveFilter('due')
+             } }>
             Due
            </Button>
             </div>
