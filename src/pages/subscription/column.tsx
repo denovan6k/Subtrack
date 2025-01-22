@@ -1,5 +1,5 @@
 import { ColumnDef } from "@tanstack/react-table";
-import { ArrowUpDown } from "lucide-react"
+
 
 
 
@@ -20,7 +20,7 @@ import x from '../../assets/x.svg'
 import active from '../../assets/active.svg'
 import inactive from '../../assets/inactive.svg'
 import due from '../../assets/duein.svg'
-import { Button } from "../../components/ui/button";
+
 
 const statusIcon = (row: tableData) => {
   switch (row.status) {
