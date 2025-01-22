@@ -12,7 +12,7 @@ export const CardData:CardDat[] = [
         link: '/dashboard/setting'
     },
     {
-    name:'Reminder',
+    name:'Reminders',
     icon:<Icon icon="carbon:reminder" className='text-2xl' />,
     link: '/dashboard/setting/reminder'
 },

@@ -9,6 +9,22 @@ import {
     DialogTitle,
   
   } from "../../components/ui/dialog"
+  import {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+  } from "../../components/ui/drawer"
+  
+
+
+
+
+
   import check from '../../assets/check.svg'
   import { Label } from "../../components/ui/label"
   import { Link, useNavigate } from "react-router-dom"

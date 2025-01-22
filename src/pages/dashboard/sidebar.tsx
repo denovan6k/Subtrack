@@ -13,7 +13,7 @@ const Sidebar = () => {
            {SidebarData.map((item,index) => (
                 <ul className='flex flex-col gap-6' key={index}>
                   <NavLink to={item.link}
-                  end={item.link === "/dashboard"}  
+                  end={item.link === "/dashboard" || item.link === "/dashboard/setting"}  
                   className={({ isActive }) =>
                 isActive ? "bg-[#DBEDFF] text-[#2152FF] rounded-lg  " : ""
               

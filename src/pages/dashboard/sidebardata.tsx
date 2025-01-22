@@ -19,10 +19,16 @@ export const SidebarData:sidebarProps[] = [
     
         
 },
+{ icon:<Icon icon="carbon:reminder" className='text-2xl' />,
+    title:'Reminders',
+    link:'/dashboard/setting/reminder'
+    
+        
+},
   {
     icon:<Icon icon="material-symbols:analytics-outline" className='text-2xl' />,
-    title:'Transaction',
-    link:'/dashboard/transaction'
+    title:'Reports',
+    link:'/dashboard/report'
         
 },
   {icon:<Icon icon="ic:baseline-support-agent" className='text-2xl' />,
