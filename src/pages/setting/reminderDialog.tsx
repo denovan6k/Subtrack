@@ -75,7 +75,7 @@ const ReminderDialog = () => {
 
     const closeDialog = () => {
         form.handleSubmit(onSubmit)();
-        navigate('/dashboard/setting');
+        navigate('/dashboard/setting/reminder');
      
       };
 
