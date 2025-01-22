@@ -1,6 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Mullish';
+  src: url("/src/assets/font/Mulish-VariableFont_wght.ttf") format('truetype');
+  font-weight: 400; /* Adjust according to your font file */
+  font-style: normal; /* Adjust according to your font file */
+}
+body {
+  font-family: 'Mullish', sans-serif;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -64,3 +74,4 @@
     @apply bg-background text-foreground;
   }
 }
+

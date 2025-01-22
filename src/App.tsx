@@ -7,12 +7,15 @@ import Home from "./pages/home/home";
 
 import Authroute from "./authentication/authroute";
 import Sidebar from "./pages/dashboard/sidebar";
+import './index.css'; // Ensure this line is present to import your global styles
 
 import Dashboardroute from "./pages/dashboard/dasboardroute";
 
 
 function App() {
   return (
+    <>
+    <div className="font-custom">
     <Router>
       <Routes>
         <Route path="/authentication/*" element={<Authroute />} />
@@ -23,6 +26,8 @@ function App() {
         <Route path="/dashboard/*" element={<Dashboardroute/>} />
       </Routes>
     </Router>
+    </div>
+    </>
   );
 }
 

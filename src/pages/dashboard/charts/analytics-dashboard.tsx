@@ -1,6 +1,6 @@
-"use client"
 
-import { useState } from "react"
+
+import { useState,useMemo } from "react"
 import { Line, LineChart, XAxis, YAxis, ResponsiveContainer } from "recharts"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../../components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card"
@@ -68,7 +68,17 @@ export default function AnalyticsDashboard() {
   const [subscriptionType, setSubscriptionType] = useState("all")
   const [metric, setMetric] = useState("amount")
   const [period, setPeriod] = useState("monthly")
+ // Memoized total based on subscription type
+ const totalValue = useMemo(() => {
+  const data = mockData[subscriptionType as keyof typeof mockData]
+  return data.reduce((total, item) => total + item.value, 0)
+}, [subscriptionType])
 
+// Get the last date (month) from the selected subscription type's data
+const lastMonth = useMemo(() => {
+  const data = mockData[subscriptionType as keyof typeof mockData]
+  return data[data.length - 1]?.month
+}, [subscriptionType])
   return (
     <Card className="w-full">
       <CardHeader className="space-y-0 pb-2">
@@ -170,8 +180,8 @@ export default function AnalyticsDashboard() {
         </div>
         <div className="flex items-center justify-between px-4 py-4">
           <div className="flex flex-col">
-            <span className="text-2xl font-bold">$82,450</span>
-            <span className="text-xs text-muted-foreground">Sat, 15 Aug</span>
+            <span className="text-2xl font-bold">{`$${totalValue.toLocaleString()}`}</span>
+            <span className="text-xs text-muted-foreground">{`${lastMonth}`}</span>
           </div>
           <span className="text-xs text-blue-500 cursor-pointer">Click to learn more</span>
         </div>
