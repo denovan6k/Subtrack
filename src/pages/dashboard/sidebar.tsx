@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <>
     <section className='flex flex-col gap-8 p-4 border-r border-[#CCCCCC] '>
-    <header className='flex items-center gap-4'>
+    <header className='flex mt-6 items-center gap-4'>
            <img src={img1} alt="" />
            <p className="text-2xl font-semibold  text-[#2152FF]">SUBTrack</p>
            </header>
