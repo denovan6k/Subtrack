@@ -18,7 +18,7 @@ const Dashboardroute = () => {
     <Route path='/subscription/:id' element={<Subscription/>}/>
     <Route path='/subscription/new' element={<NewSub/>}/>
     <Route path='/subscription/new/:id' element={<NewSub/>}/>
-    <Route path='/setting' element={<SettingRoutes/>}/>
+    <Route path='/setting/*' element={<SettingRoutes/>}/>
     
 
     </Route>

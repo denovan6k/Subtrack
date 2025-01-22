@@ -41,10 +41,11 @@ const SubForm = () => {
     },
   });
 
-const {setIsOpen}=useSubscriptionStore()
+const {setIsOpen,setIsClicked}=useSubscriptionStore()
 
   const onSubmit = (data: any) => {
     console.log(data);
+    setIsClicked(true)
     setIsOpen(true)
     
   };

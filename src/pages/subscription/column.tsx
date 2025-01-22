@@ -208,15 +208,13 @@ export const columns: ColumnDef<tableData>[] = [
   { 
     accessorKey:'status', //id is the same as the accessorKey
     accessorFn: (row) => row.status, // set the price value
-    header: ({ column }) => {
+    header: () => {
       return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")} // onClick sort the column by asc or desc order
-        >
+        <p
+   >
           Status
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
+          
+        </p>
       )
     },
     cell: ({ row }) => {

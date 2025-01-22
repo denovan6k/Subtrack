@@ -1,4 +1,4 @@
-
+import Confetti from 'react-confetti'
 import {
     Dialog,
     DialogContent,
@@ -20,14 +20,17 @@ import { useSubscriptionStore } from "./store"
 import { Button } from "../../components/ui/button"
   interface DialogDemoProps {
       id: string
+      
   }
  
 
   export function DialogNew({id}:DialogDemoProps) {
       const navigate= useNavigate()
        const [dat,setDat]=useState<SubscriptionProps|null>(null)
-       const {isOpen}=useSubscriptionStore()
+      
+       const {isOpen,isClicked,setIsClicked}=useSubscriptionStore()
   useEffect(() => {
+     
       if(id){
          const index= parseInt(id as string) 
          const data = SubsData.find((item) => item.id === index)
@@ -35,14 +38,22 @@ import { Button } from "../../components/ui/button"
          setDat(data)
       }}
       console.log(dat)
-  }, [id])
+      isClicked && setTimeout(() => {
+          setIsClicked(false)
+        }, 3000);
+  }, [id,isClicked])
   
       const closeDialog = () => {
+        setIsClicked(false)
           navigate('/dashboard/subscription/new'); // Change the route back to the main page (or any other route)
         };
     return (
         <>
-        {!isOpen && (<Dialog open={id?true:false} onOpenChange={closeDialog}>
+         {isClicked && <Confetti />}
+        {!isOpen && (
+          
+          
+          <Dialog open={id?true:false} onOpenChange={closeDialog}>
        
        <DialogContent className="sm:max-w-[425px] lg:max-w-3xl">
          <DialogHeader>
