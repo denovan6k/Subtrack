@@ -49,13 +49,13 @@ const SignUp = () => {
 
   const onSubmit = (data: any) => {
     console.log(data);
-    navigate(`/dashboard`)
+    navigate(`/authentication/started`)
   };
   return (
     <>
     <div className='md:grid md:grid-cols-2 min-h-screen  '>
 
-      <section className='flex flex-col gap-4 lg:px-10 lg:py-12 md:px-6 md:py-8 px-4 py-6'>
+      <section className='flex flex-col gap-4 justify-center lg:px-10 lg:py-12 md:px-6 md:py-8 px-4 py-6'>
            {/* <header className='flex items-center gap-4'>
            <img src={img1} alt="" />
            <p className="text-2xl font-bold  text-white">SUBTrack</p>

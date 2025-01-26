@@ -17,12 +17,12 @@ import { useSubscriptionStore } from './store';
 
 
 const formSchema = z.object({
-  amount: z.string().min(1, "Amount must be at least 3 character long"),
-  frequency: z.string().min(3,"Please select frequency"),
-  payment: z.string().min(3, "Please fill payment date"),
-  expiration: z.string().min(3,"Please fill expiration date"),
-  renewal: z.string().min(3, "Please fill renewal date"),
-  taxinfo: z.string().min(3,"Please fill tax information"),
+  amount: z.string().min(3, "Amount must be at least 3 character long"),
+  frequency: z.string().min(1,"Please select frequency"),
+  payment: z.string().min(1, "Please fill payment date"),
+  expiration: z.string().min(1,"Please fill expiration date"),
+  renewal: z.string().min(1, "Please fill renewal date"),
+  taxinfo: z.string().min(1,"Please fill tax information"),
 
 });
 
