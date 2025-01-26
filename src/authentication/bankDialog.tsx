@@ -83,12 +83,11 @@ const BankDialog = () => {
 
 
 
-    const closeDialog = () => {
-        form.handleSubmit(onSubmit)();
-        navigate(`/authentication/started`);
+      const closeDialog = () => {
+        
+        navigate('/authentication/started');
      
       };
-
 
 
 
