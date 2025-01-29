@@ -10,7 +10,7 @@ const Footer = () => {
         <ul className="flex flex-col gap-8 justify-center items-center">
            <li>
             <Button variant={'default'} className="bg-white text-black border border-black">
-                Get for free
+                Get for Free
             </Button>
            </li>
            <li className="text-white max-w-sm text-wrap text-center ">
