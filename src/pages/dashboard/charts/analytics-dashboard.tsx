@@ -91,8 +91,11 @@ const lastMonth = useMemo(() => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All subscriptions</SelectItem>
-                <SelectItem value="premium">Premium</SelectItem>
-                <SelectItem value="basic">Basic</SelectItem>
+               
+                <SelectItem value="basic">One-time subscription</SelectItem> 
+                <SelectItem value="premium">Recurring subscriptions</SelectItem>
+                <SelectItem value="premium">Tax category</SelectItem>
+              
               </SelectContent>
             </Select>
 

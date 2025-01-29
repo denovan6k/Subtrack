@@ -1,8 +1,13 @@
 import img1 from '../../../assets/logo.svg'
 import { Button } from '../../../components/ui/button'
 import img2 from '../../../assets/tail-right.svg'
-import { Link } from 'react-router-dom'
+
+import { useAuth0 } from "@auth0/auth0-react";
 const HeroSection = () => {
+  const { loginWithRedirect } = useAuth0();
+  const getHandleLogin = async () => {
+    await loginWithRedirect();
+  };
   return (
     <>
     <section className='lg:px-32 py-4 lg:py-16 px-4 flex flex-col gap-8 bg-hero-image bg-no-repeat bg-cover'>
@@ -14,11 +19,11 @@ const HeroSection = () => {
         <h1 className='text-3xl text-white font-bold'>SUBTrack</h1>
           </li>
           <li className='flex items-center gap-2'>
-            <Button variant={'ghost'} className='text-white' asChild>
-              <Link to={'/authentication/signup'}>
+            <Button variant={'ghost'} className='text-white' onClick={getHandleLogin}>
+         
               
               Login
-              </Link>
+           
             </Button>
             <Button variant={'default'} className='text-white bg-[#2152FF] hover:bg-[#2152FF]/70'>
              Sign Up
