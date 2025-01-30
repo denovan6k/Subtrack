@@ -8,6 +8,7 @@ const HeroSection = () => {
   const getHandleLogin = async () => {
     await loginWithRedirect();
   };
+  
   return (
     <>
     <section className='lg:px-32 py-4 lg:py-16 px-4 flex flex-col gap-8 bg-hero-image bg-no-repeat bg-cover'>
