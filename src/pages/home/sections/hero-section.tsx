@@ -3,12 +3,19 @@ import { Button } from '../../../components/ui/button'
 import img2 from '../../../assets/tail-right.svg'
 
 import { useAuth0 } from "@auth0/auth0-react";
+
 const HeroSection = () => {
   const { loginWithRedirect } = useAuth0();
-  const getHandleLogin = async () => {
-    await loginWithRedirect();
-  };
   
+  const getHandleLogin = async () => {
+   
+    await   loginWithRedirect({
+      authorizationParams: {
+        redirect_uri: "/authentication/signup",
+      },
+    })
+  };
+
   return (
     <>
     <section className='lg:px-32 py-4 lg:py-16 px-4 flex flex-col gap-8 bg-hero-image bg-no-repeat bg-cover'>
