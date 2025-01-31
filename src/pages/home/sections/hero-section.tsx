@@ -11,7 +11,7 @@ const HeroSection = () => {
    
     await   loginWithRedirect({
       authorizationParams: {
-        redirect_uri: "/authentication/signup",
+        redirect_uri: "https://subtrack-psi.vercel.app/authentication/signup",
       },
     })
   };
