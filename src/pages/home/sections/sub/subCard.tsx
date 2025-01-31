@@ -1,10 +1,10 @@
-import img1 from '../../../../assets/laptop.svg'
+import img1 from '../../../../assets/SUBTrack Demo Day-3.png'
 import SubscriptionAccordion from "./subcriptionAccordion"
 const SubCard = () => {
   return (
             <>
             <section className="lg:px-32 py-4 lg:py-16 px-4 flex flex-col gap-8">
-              <main className="grid grid-cols-2 gap-8 ">
+              <main className="grid grid-cols-2 gap-8 items-center">
                 <ul className='mt-8 flex flex-col gap-8'>
                     <li className='text-3xl font-bold text-[#373F41]'>
                     Do you have subscriptions you want to manage?
@@ -17,7 +17,7 @@ const SubCard = () => {
                     </li>
 
                 </ul>
-                <img src={img1} alt='' className=''/>
+                <img src={img1} alt='' className='w-full rounded-xl'/>
               </main>
             </section>
             </>

@@ -11,14 +11,16 @@ const HeroSection = () => {
    
     await   loginWithRedirect({
       authorizationParams: {
-        redirect_uri: "https://subtrack-psi.vercel.app/authentication/signup",
+
+        redirect_uri: "https://subtrack-psi.vercel.app/authentication/signup", 
+        
       },
     })
   };
 
   return (
     <>
-    <section className='lg:px-32 py-4 lg:py-16 px-4 flex flex-col gap-8 bg-hero-image bg-no-repeat bg-cover'>
+    <section className='lg:px-32 py-4 lg:py-16 px-4 flex flex-col gap-8 bg-hero-image bg-no-repeat bg-cover xl:min-h-[700px] '>
      <header className=' '>
         <ul className='flex justify-between items-center'>
           <li className='flex items-center gap-4'>
@@ -41,6 +43,7 @@ const HeroSection = () => {
         </ul>
 
      </header>
+     <main className='flex xl:justify-center flex-col gap-4  xl:my-auto xl:gap-8'>
      <p className='text-4xl text-white font-bold text-start text text-wrap max-w-2xl'>
      Simplify Subscription Management Effortlessly
      </p>
@@ -53,6 +56,7 @@ const HeroSection = () => {
             Get For Free
             <img src={img2} alt='get free cta'/>
             </Button>
+            </main>
     </section>
     </>
   )
