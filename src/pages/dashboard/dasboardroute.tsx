@@ -4,6 +4,7 @@ import Dashboard from "./dashboard";
 import Subscription from "../subscription/subcription";
 import NewSub from "../subscription/newSub";
 import SettingRoutes from "../setting/settingRoutes";
+import ReminderCard from "../setting/reminderCard";
 
 
 
@@ -18,6 +19,8 @@ const Dashboardroute = () => {
     <Route path='/subscription/:id' element={<Subscription/>}/>
     <Route path='/subscription/new' element={<NewSub/>}/>
     <Route path='/subscription/new/:id' element={<NewSub/>}/>
+    <Route path='/reminder/*' element={<ReminderCard/>}/>
+    <Route path='/reminder/:id*' element={<ReminderCard/>}/>
     <Route path='/setting/*' element={<SettingRoutes/>}/>
     
 

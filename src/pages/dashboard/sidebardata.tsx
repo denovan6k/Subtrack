@@ -21,7 +21,7 @@ export const SidebarData:sidebarProps[] = [
 },
 { icon:<Icon icon="carbon:reminder" className='text-2xl' />,
     title:'Reminders',
-    link:'/dashboard/setting/reminder'
+    link:'/dashboard/reminder'
     
         
 },

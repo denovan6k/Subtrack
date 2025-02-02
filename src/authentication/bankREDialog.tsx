@@ -56,7 +56,7 @@ const RewBankDialog = () => {
           <main >
           
             <ul className="flex flex-col gap-2">
-            <label className="text-black/80">Gig_economy_ deirect_rpt_cA</label>
+            <label className="text-black/80">Spotify direct_wrp casy</label>
                 <li className="flex justify-between">
                     <div className="flex flex-col ">
                     <h1 className="text-black">
@@ -66,50 +66,18 @@ const RewBankDialog = () => {
                     </div>
                     <div>
                     <h1 className="text-black">
-                    12 month earnings
+                    12 month payments
                     </h1>
                     <p className="text-black/80">
-                    $28,445,92
+                    $28,445.92
                     </p>
                     </div>
                    
                 </li>
-                <li className="flex justify-between">
-                    <div className="flex flex-col ">
-                    <h1 className="text-black">
-                    Interval
-                    </h1>
-                    <p  className="text-black/80">Monthly</p>
-                    </div>
-                    <div>
-                    <h1 className="text-black">
-                    12 month earnings
-                    </h1>
-                    <p className="text-black/80">
-                    $28,445,92
-                    </p>
-                    </div>
+               
                    
-                </li>
-                <label className="text-black/80">Gig_economy_ deirect_rpt_cA</label>
-                <li className="flex justify-between">
-                    <div className="flex flex-col ">
-                    <h1 className="text-black">
-                    Most recent deposit
-                    </h1>
-                    <p  className="text-black/80">$2,845,92</p>
-                    </div>
-                    <div>
-                    <h1 className="text-black">
-                    12 month earnings
-                    </h1>
-                    <p className="text-black/80">
-                    $28,445,92
-                    </p>
-                    </div>
-                   
-                </li>
-
+              
+            
             </ul>
 
           </main>

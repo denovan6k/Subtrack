@@ -4,6 +4,8 @@ import { Button } from "../../components/ui/button";
 import { Separator } from "../../components/ui/separator";
 import { Switch } from "../../components/ui/switch";
 import { useNavigate } from "react-router-dom";
+import ReminderDialog from "./reminderDialog";
+import Navbar from "../dashboard/navbar";
 const ReminderCard = () => {
   const [activeFilter, setActiveFilter] = useState<string>('All');
   const navigate = useNavigate();
@@ -14,11 +16,17 @@ const ReminderCard = () => {
   const handleSubmit = (id:number|undefined)=>{
          
     
-    navigate(`/dashboard/setting/reminder/${id}`, { replace: true });
+    navigate(`/dashboard/reminder/${id}`, { replace: true });
 }
   return (
     <>
-    <main className="flex flex-col gap-4 p-4 border border-black/20 rounded-lg">
+    <section className="p-4">
+     <header className="">
+      <Navbar/>
+    </header>
+     
+  
+    <main className="flex flex-col gap-4  p-4 pb-4 lg:px-8 lg:pb-8 border border-black/20 rounded-lg">
        <header className="flex justify-between items-center">
          <p>Reminders</p>
          <div className="rounded-full px-2 py-2 flex gap-2 max-w-[346px] border border-black/20 items-center justify-between ">
@@ -89,6 +97,9 @@ const ReminderCard = () => {
         )}
       </section>
       </main>
+     
+      </section>
+      <ReminderDialog />
     </>
   );
 };

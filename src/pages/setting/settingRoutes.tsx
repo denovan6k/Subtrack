@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import SettingLayout from "./setting";
 import PoForm from "./form";
-import ReminderCard from "./reminderCard";
+
+import TeamForm from "./team";
 
 
 
@@ -11,8 +12,8 @@ const SettingRoutes = () => {
  <Routes>
     <Route path="/" element={<SettingLayout/>} > 
     <Route index element={<PoForm/>} />
-    <Route path='/reminder' element={<ReminderCard/>}/>
-    <Route path='/reminder/:id' element={<ReminderCard/>}/>
+    <Route path='/team' element={<TeamForm/>}/>
+    
     
 
     </Route>
