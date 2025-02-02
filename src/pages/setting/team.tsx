@@ -58,7 +58,7 @@ const TeamForm = () => {
       <section className='flex flex-col gap-4 p-4'>
            <header className=''>
          
-           <p className="text-xl font-bold  text-white">Invite your team members</p>
+           <p className="text-sm font-bold  text-black/70">Invite your team members</p>
            </header>
           
            <Form {...form}>
