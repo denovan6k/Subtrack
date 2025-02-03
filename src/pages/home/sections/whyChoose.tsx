@@ -8,8 +8,8 @@ const WhyChoose = () => {
         <img className='w-full' src={img1} alt=''/>
         <ul className='flex flex-col gap-4'>
             <li className='uppercase font-bold text-[#2152FF]'>
-            why choose us
-            </li>
+            why choose us 
+            </li> 
             <li className='text-3xl font-bold text-[#373F41] max-w-xs'>
             We scratch, build and play together
             </li>
