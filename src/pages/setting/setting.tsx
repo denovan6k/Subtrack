@@ -19,11 +19,11 @@ const SettingLayout = () => {
             <p className="text-[#000000]/70"> Update your personal information and password to keep your account secure</p>
           </>
         );
-      case '/dashboard/setting/reminder':
+      case '/dashboard/setting/team':
         return (
           <>
-                <h1 className="text-black font-semibold text-xl">Reminder</h1>
-                <p className="text-[#000000]/70"> Set your due date reminders</p>
+                <h1 className="text-black font-semibold text-xl">Team Member</h1>
+                <p className="text-[#000000]/70"> Add your team members</p>
           </>
         );
       case '/dashboard/setting/delete':

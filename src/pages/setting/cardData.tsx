@@ -13,7 +13,7 @@ export const CardData:CardDat[] = [
     },
     {
     name:'Team Members',
-    icon:<Icon icon="carbon:reminder" className='text-2xl' />,
+    icon:<Icon icon="fluent:people-team-24-regular" className='text-2xl' />,
     link: '/dashboard/setting/team'
 },
 

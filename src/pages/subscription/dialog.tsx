@@ -232,14 +232,14 @@ useEffect(() => {
         </ul>
         <ul className="text-black flex flex-col gap-2 font-medium">
             <li>
-            Netflix premium plan
+           {dat?.platform} Premium plan
             </li>
             <li>
             $1,140/mo
             </li>
         </ul>
         <DialogDescription>
-        With Netflix's Premium Plan, you can stream on up to four supported devices simultaneously in Ultra High Definition (UHD/4K) quality with HDR, download content on up to four devices for offline viewing, enjoy unlimited access to a vast library of movies, TV shows, and mobile games, and experience immersive sound with Netflix's spatial audio.
+       {dat?.description}
         </DialogDescription>
         </div>
         {/* <DialogFooter>
