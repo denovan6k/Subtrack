@@ -12,9 +12,9 @@ export const CardData:CardDat[] = [
         link: '/dashboard/setting'
     },
     {
-    name:'Reminders',
+    name:'Team Members',
     icon:<Icon icon="carbon:reminder" className='text-2xl' />,
-    link: '/dashboard/setting/reminder'
+    link: '/dashboard/setting/team'
 },
 
 {

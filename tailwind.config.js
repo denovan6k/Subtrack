@@ -17,7 +17,7 @@ export default {
 
 		  },
 		  backgroundImage: {
-			'hero-image': "url('./assets/heroimage.svg')",
+			'hero-image': "url('./assets/SUBTrack Demo Day.svg')",
 			'login-image': "url('./assets/signupimg.svg')",	
 		  },
   		colors: {

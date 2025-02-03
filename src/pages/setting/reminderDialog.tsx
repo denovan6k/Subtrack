@@ -75,7 +75,7 @@ const ReminderDialog = () => {
 
     const closeDialog = () => {
         form.handleSubmit(onSubmit)();
-        navigate('/dashboard/setting/reminder');
+        navigate('/dashboard/reminder');
      
       };
 
@@ -155,14 +155,8 @@ const ReminderDialog = () => {
          
          <main className="flex flex-col gap-4">
          <Separator/>
-            <section className="flex justify-between items-center">
-                <div>
-                 <h1 className="text-black">Mobile push  Reminder</h1>
-                 <p className="text-[#000000]/70 text-sm"> receive instant reminders directly on your mobile device </p>
-                </div>
-                 <Switch className='data-[state=checked]:bg-[#2152FF] data-[state=unchecked]:bg-black/30'/>
-            </section>
-            <Separator/>
+          
+            
             <section className="flex justify-between items-center">
                 <div>
                  <h1 className="text-black">Desktop Reminder</h1>

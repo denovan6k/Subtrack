@@ -8,7 +8,7 @@ const WhatCard = () => {
     <section className="lg:px-32 py-4 lg:py-16 px-4 flex flex-col gap-8">
       <div className="">
       <p className='text-center text-3xl font-medium text-[#373F41]'> What makes us unique? </p>
-      <div className="flex justify-end">
+      {/* <div className="flex justify-end">
       <svg xmlns="http://www.w3.org/2000/svg" width="126" height="128" viewBox="0 0 126 128" fill="none">
   <g filter="url(#filter0_d_1357_12502)">
     <circle cx="64" cy="54" r="34" fill="#2152FF"/>
@@ -29,7 +29,7 @@ const WhatCard = () => {
     </filter>
   </defs>
 </svg>
-        </div>
+        </div> */}
       
       </div>
         

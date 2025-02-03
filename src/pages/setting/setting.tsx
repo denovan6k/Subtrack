@@ -49,7 +49,9 @@ const SettingLayout = () => {
     </header>
     <section className="px-4 pb-4 lg:px-8 lg:pb-8"> {renderContent()} </section>
     <main className="px-4 pb-4 lg:px-8 lg:pb-8 grid grid-cols-[240px_1fr] gap-4 ">
+    <div className={`${pathname === ''}`}>
     <SettingCard/>
+    </div>
     <Outlet/>
     </main>
     <ReminderDialog />
