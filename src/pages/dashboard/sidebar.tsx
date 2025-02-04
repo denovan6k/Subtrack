@@ -1,17 +1,17 @@
-import img1 from '../../assets/logoblue.svg'
+import img1 from '../../assets/logo.svg'
 import { SidebarData } from './sidebardata'
 
 import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (
     <>
-    <section className='flex flex-col gap-8 p-4 border-r border-[#CCCCCC] '>
+    <section className='flex flex-col gap-8 p-4 border-r border-[#CCCCCC] bg-[#2152FF] '>
     <header className='flex mt-6 items-center gap-4'>
            <img src={img1} alt="" />
-           <p className="text-2xl font-semibold  text-[#2152FF]">SUBTrack</p>
+           <p className="text-2xl font-semibold  text-white">SUBTrack</p>
            </header>
            {SidebarData.map((item,index) => (
-                <ul className='flex flex-col gap-6' key={index}>
+                <ul className='flex flex-col text-white gap-6' key={index}>
                   <NavLink to={item.link}
                   end={item.link === "/dashboard" || item.link === "/dashboard/setting"}  
                   className={({ isActive }) =>
